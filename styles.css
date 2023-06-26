@@ -1,26 +1,59 @@
-/*If the screen is 768px or smaller, then...*/
+/*When the screen is 768px or GREATER, do...*/
 @media screen and (min-width: 768px) {
-    /*Lets all the elements move around with screen width with Flex, center is obvious,
-    space between keeps things tidy, padding is for the word space from the borders
-    and margin messes with the background color reaching the edge or not...*/
+    /*Lets all the elements move around with the screen width with Flex, Space Between keeps the list and the HTML title on oppisite sides of the screen,
+    Padding is for the word space from the borders of the page and from the Header, 
+    while the Alignment is for all the words to be centered vertically in the Header space...*/
     header {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        padding: 5px;
-        margin: 0px;
+        padding: 0% 1%;
+        align-items: center;
     }
     /*YEET the margin space because it tango's with the background color for SOME reason...*/
     body {
         margin: 0px;
     }
+    /*Inline basically means what it says, keeps the list in a nice line and not in a column block,
+    Margin is to keep things closer to vertically center, and font size is font size*/
+    .nav-list li {
+        display: inline-flex;
+        margin: 5px;
+        font-size: 16px;
+    }
 }
-/*When screen is 768px+ then...??? the @media portion wasn't very clear in my opinion...*/
 
-/*This makes the Header have NO margin space for the background,
-the background color off white, and the font change from default!*/
+/*When the screen is 768px or LESSTHAN, do...*/
+@media screen and (max-width: 767px) {
+    /*You need Flex if you are to use anything else from the Flexbot area, and I need these to be a nice column when the screen is small so...
+    And Padding is so the Header words don't touch the edge of the screen*/
+    header {
+        display: flex;
+        flex-flow: column;
+        padding: 0% 1%;
+    }
+    /*Flex also gets rid of the ugly list dots too!*/
+    .nav-list li {
+        display: flex;
+        font-size: 16px;
+    }
+    /*When the screen is small, we want those buttons to be FULL width of the screen!!*/
+    button {
+        width: 100%;
+    }
+    /*Genuinely, this was the only reasonable way I could think of to get the HTML image to dissapear when the screen was small,
+    I know I'll get docked at least one point for this entire little extra Media section, 
+    but I think this Phone Screen sizing thing will definately need to be touched on in class more. In desine it should be first, 
+    but then the latter elements also override the former code completely no matter the desired outcome...? Just frustrated entirely, so maybe it's just me,
+    either way, something isn't clicking somewhere!*/
+    #html-image{
+        display: none;
+    } 
+}
+
+/*Otherwise do...*/
+
+/*This makes the background color off white, and the font change from default!*/
 header {
-    margin: 0px;
     background-color: #F2F2F2;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -30,20 +63,16 @@ body {
     margin: 0px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-/*This makes the MAIN part of the HTML have a 5 pixel border from the edge of the page,
-and a 20% padding from the words from the TOP and BOTTOM of the page! (0% is Left and Right!)
+/*This makes the Div container part of the HTML have a 1% pad from the edge of the page,
+and a 20% padding from the words from the TOP and BOTTOM of the page!
 And a font change from Default.*/
-main {
-    margin: 5px;
-    padding: 20% 0%;
+div {
+    padding: 20% 1%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-/*This changes Heading 1's text to Cyan colors!*/
+/*This changes Heading 1's text to Cyan colors! Also gets rid of the Margin!*/
 h1 {
-    color: #20a8b4;
-}
-/*This changes Heading 2's text to Cyan colors!*/
-h2 {
+    margin: 0px;
     color: #20a8b4;
 }
 /*This makes the TEXT White, the Button Cyan, 
@@ -69,16 +98,10 @@ button:hover {
     background-color: #ff5c0f;
     border-color: #ff5c0f;
 }
-/*This makes the Image hang off the right side of the page!*/
-/*Going to be 1000% honest here, I have no idea if I was supposed to nest this or not, but ffs I couldn't get this to NOT show up in a smaller window
-I AM DOING MY BEST, AND MY BEST IS NOT VERY GOOD*/
+/*This makes the Image hang off the right side of the page!
+The Padding is to keep the image around the same area no matter the size of the screen from the Header!*/
 #html-image {
-    width: 650px;
     float: right;
-}
-/*This makes the list horizontal, and 5 pixels from the edge of the page!*/
-.nav-list li {
-    display: inline-flex;
-    margin: 5px;
-    font-size: 16px;
+    width: 650px;
+    padding: 8% 1%;
 }

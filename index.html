@@ -1,17 +1,22 @@
+<!--These are declaired at the start of the documents for type, language, ect.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- This is where the screen size is measured and communicated back to the CSS portion!-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <!--Rel stands for Relationship!-->
+    <!--This is the Tab Title!-->
+    <title>Learn to Code</title>
+    <!--Linking back to the CSS code so they can talk to each other and work!-->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <!--This just colors the words differently mid sentence rather than fighting with CSS and adding in extra containers-->
     <h1>Learn to <span style="color: #ff5c0f">Code</span></h1>
     <nav>
+        <!--This is the Hyperlink List! Or potential anyway, since this isn't linking out to anything really...-->
         <ul class="nav-list">
             <li><a href="#bootcamps">Bootcamps</a></li>
             <li><a href="#workshops">Workshops</a></li>
@@ -25,10 +30,12 @@
         <!--The SRC command after an image input is for the acutal sourse of the image. The ALT command is for a description for Accessibiltiy users!-->
         <img id="html-image" src="Assets/code.svg"
              alt="Two People Holding Brackets"/>
-        <!--This is the Introduction!-->
-        <h2>Do you think about <span style="color: #ff5c0f">learning to code?</span></h2>
-        <p>Learn to code and develop a new career!</p>
-        <button>Learn More</button>
+        <!--I added a Div container here so then I could actually mess with the image placement without it being attached to the words-->
+        <div>
+            <h2>Do you think about <span style="color: #ff5c0f">learning to code?</span></h2>
+            <p>Learn to code and develop a new career!</p>
+            <button>Learn More</button>
+        </div>
     </main>
 </body>
 </html>
